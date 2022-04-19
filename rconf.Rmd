@@ -1,0 +1,536 @@
+---
+title: "SSK심포지움II: 팬데믹 시기 삶의 양식과 마음건강"
+subtitle: "정신건강 개념의 쟁점과 과제: 기능, 신호, 이중체계"
+author: "안도현(제주대학교)"
+institute: "서울대 팬데믹과 포스트팬데믹 시기 디지털소통양식과 정신건강 SSK사업단"
+date: "2022-4-22"
+output:
+  xaringan::moon_reader:
+    css: 
+      - [default]
+      - css/rconf.css
+      - css/rconf-fonts.css
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      after_body: [css/rconf-logo.html]
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r setup, include = FALSE}
+library(tidyverse)
+
+options(
+  htmltools.dir.version = FALSE, 
+  htmltools.preserve.raw = FALSE,
+  tibble.width = 60, tibble.print_min = 6,
+  crayon.enabled = TRUE
+)
+
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE,
+                      comment="", digits = 3, tidy = FALSE, prompt = FALSE, fig.align = 'center',
+                      fig.width = 7.252,
+                      fig.height = 4,
+                      dpi = 300)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+```
+
+
+class: title-slide, left, bottom
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+
+---
+class: inverse, middle
+name: data-science-case
+
+# .warmyellow[발표 개요]
+
+----
+
+.pull-left[
+
+.burlywood[연구문제]
+
+**.tomato[I. 정신건강 개념의 쟁점과 과제]**
+
+1. 기능 
+
+2. 신호
+
+3. 이중체계  
+
+
+]
+
+.pull-right[   
+.left[
+
+**.CornflowerBlue[순 서]** 
+
+1. 개념
+
+2. 기능  
+
+3. 신호
+
+4. 이중체계
+
+]
+] <!--end of right-column-->
+
+
+<!--------------------------  슬라이드 본문 시작 ------------------------------------->
+
+---
+name: term
+# 정신건강 용법
+
+- 건강은 신체, 정신, 및 사회 영역으로 구성(WHO, 1948; Huber et al, 2011). 정신건강은 신체건강 및 사회건강과 함께 건강의 3대 영역 중 하나.
+
+- 정신건강(mental health)의 통상적 용법 (Pilgram, 2017)
+  - 심리적으로 안녕감을 이룬 상태 지칭(예: 정신건강 촉진)
+  - 정신질환에 대한 경멸 혹은 낙인화를 피하기 위해 유화적으로 사용(예: 정신건강 문제)
+  - 정신건강 문제가 있는 사람들에게 제공 또는 강제하는 시설에 대한 유화적으로 표현(예: 정신건강 서비스). 한국에서는 정신과 전문의와 심리상담사들이 '마음건강'이란 유화적 표현 사용. 
+
+.footnote[
+Huber, M., Knottnerus, J. A., Green, L., Van Der Horst, H., Jadad, A. R., Kromhout, D., ... & Smid, H. (2011). How should we define health?. _BMJ_, 343-345. doi.org/10.1136/bmj.d4163
+
+Pilgrim, D. (2017). Key concepts in mental health (4th ed.) Sage
+
+WHO (1948). _Constitution of the World Health Organiztion_, 2005. https://www.who.int/about/governance/constitution
+
+]
+
+
+---
+name: term2
+# 적응으로서의 정신건강
+
+- 내외적 자원에 대한 이해, 활용, 의미부여 등의 3개 요소를 포함하는 어려운 상황에의 적응력 (Huber et al.,  2011)
+
+- 인지-정서 기능 및 적응의 표준 수준 (Manwell et al., 2015). 
+
+- 개인 및 사회구성원으로서 효과적인 삶과 양립하는 구조적, 기능적, 정서적 상태 (McCartney et al., 2019).
+
+- 업무의 생산적 수행, 타인과의 상호호혜적 관계 형성, 내면 세계의 충만 (Gross & Munoz, 1995). 
+
+- 이 연구에서는 "문제를 해결할수 있는 기능이 유지되는 상태"로 정의
+
+.footnote[
+Gross, J. J., & Muñoz, R. F. (1995). Emotion regulation and mental health. Clinical Psychology: Science and Practice, 2(2), 151-164. doi.org/10.1111/j.1468-2850.1995.tb00036.x
+
+Manwell, L. A., Barbic, S. P., Roberts, K., Durisko, Z., Lee, C., Ware, E., & McKenzie, K. (2015). What is mental health? Evidence towards a new definition from a mixed methods multidisciplinary international survey. BMJ Open, 5(6), e007079. dx.doi.org/10.1136/bmjopen-2014-007079
+
+McCartney, G., Popham, F., McMaster, R., & Cumbers, A. (2019). Defining health and health inequalities. Public Health, 172, 22-30. doi.org/10.1016/j.puhe.2019.03.023
+
+]
+
+
+---
+name: concept2
+# 기존 접근
+
+I. 이분법적 접근
+
+- 건강 vs. 불건강의 구분
+  - 세계보건기구(WHO: World Health Organizationi)는 건강(health)을 "단지 질병 혹은 질환이 없는 상태가 아니라, 완전하게 신체적, 정신적, 사회적 안녕감을 이룬 상태"로 정의(WHO, 1946, p. 1)
+  
+- WHO정의의 한계
+  - 안녕감에 대한 "완전한(complete)"란  용어를 사용해 거의 모든 사람을 건강하지 못한 상태인 것으로 만들어 의도하지 않게 사회 전체의 의료화를 촉진하는 문제 발생 (Huber et al., 2011).
+  - 국제기구헌장의 처방적 정의로서는 의미있으나 현상을 기술하는 정의로서는 부적절 
+  
+
+II. 연속선상의 정도
+
+- 안토노프스키(Antonovky, 1979)는 건강을 편안함(ease)과 불편함(dis-ease)의 연속선(continuum) 상에 놓여 있다고 파악해, 통합력(sense of coherence)이 ease/dis-ease 연속선상의 정도를 결정한다고 제시. 통합력은 자신의 내외부 환경에서 비롯되는 자극(스트레스 등)을 이해하고, 자신에게 가용한 자원을 활용해 삶의 의미를 부여할 수 있는 능력 (Eriksson, 2022).
+  
+
+.footnote[
+Antonovsky, A. (1979). Health, stress and coping. Jossey-Bass.
+
+Eriksson, M. (2022). The sense of coherence: The concept and its relationship to health. In M. B. Mittelmark et al. (eds.), _The handbook of salutogenesis. Springer. https://doi.org/10.1007/978-3-030-79515-3_9
+
+]
+
+
+---
+name: concept3
+# 기존 접근의 한계
+
+I. 행동의 이중체계 문제
+
+II. 기능과 신호의 구분 문제
+
+
+---
+name: daul
+# 행동의 이중 체계(dual system)
+
+- 모든 생물의 생존과 번식을 위한 행동은 크게 보상에 대한 접근(approach)과 처벌에 대한 회피(avoidance) 등 두개의 독립된 체계로 분리 (Gray, 1990). 
+
+  - 흔히 이 접근과 회피 체계는 마치 단일 선상의 서로 반대되는 것으로 간주돼 접근의 반대는 회피, 부정감정의 반대는 긍정감정 혹은 그 반대인 것으로 여기는 경우가 있지만, 실은 접근과 회피 그리고 긍정과 부정 등의 체계는 신경, 심리 및 행동 수준에서 상호 독립적. 
+  
+  - 두 체계의 독립성은 다양한 연구를 통해 확인(e.g., Caccioppo et al., 1999)
+  
+.footnote[
+Gray, J. A. (1990). Brain systems that mediate both emotion and cognition. Cognition & Emotion, 4(3), 269-288. https://doi.org/10.1080/02699939008410799
+
+Cacioppo, J. T., Gardner, W. L., & Berntson, G. G. (1999). The affect system has parallel and integrative processing components form follows function. Journal of Personality and Social Psychology, 76(5), 839–855. http://dx.doi.org/10.1037/
+0022-3514.76.5.839.
+
+]
+
+
+---
+name: dual2
+# 정신건강과 정신질환의 이중 체계
+
+정신건강과 정신질환 역시 단일 연속선상의 양극단이 아니라 연속선상의 여러 지점 (U.S. Department of Health and Human Services, 1999). 
+
+-  정신건강(mental health): 정신 기능의 성공적인 수행 상태. 이를 통해 생산적인 행동과 다른 사람과의 관계 충족하고, 변화에 적응하며 고난에 대응 
+
+- 정신질환(mental illness): 진단가능한 모든 정신장애(mental disorder)을 집합적으로 지칭. 정신장애는 기능장애를 수반하는 사고, 기분, 행동의 변화로 특징지어지는 건강상태. 
+  - 사고 변화 예: 알츠하이머
+  - 기분 변화 예: 우울장애
+  - 행동 변화 예: 주의결핍행동과잉
+
+- 주요진단도구  
+  - DSM(Diagnostic and Statistical Manual) by APA
+  - ICD(International Classification of Disease) by WHO
+  - RDoC(Research Domain Criteria) by NIMH
+
+
+.footnote[
+U.S. Department of Health and Human Services. (1999). Mental health: A report of the Surgeon General. Rockville. https://collections.nlm.nih.gov/ext/document/101584932X120/PDF/101584932X120.pdf
+
+]
+
+
+
+---
+name: dual3
+# 정신건강의 이중 체계
+
+
+- 심리적 안녕(well-being)과 불안녕(ill-being)은 단일 연속선상의 반대편이 아니라 별개의 구분된 체계  
+
+  - 불안녕의 부재가 곧 높은 안녕을 의미하지 않는다. 실제로 높은수준의 불안녕과 높은 수준의 안녕을 유지하는 개인 존재하고, 동시에 정신질환이 없음에도 삶의 의미를 찾지 못하는 경우도 존재한다 (Ryff et al., 2006). 
+  
+  - 심리적 불안녕(우울)의 측정결과와 심리적 안녕(관계성 등)의 측정 결과 사이의 부적 상관성은 중간 정도(-.4 ~ - .55)(Keyes & Lopez, 2002). 
+  
+
+
+.footnote[
+Keyes, C. L., & Lopez, S. J. (2002). Toward a science of mental health. In C.R. Snyder & S. J. Lopez (Eds.) Oxford handbook of positive psychology (pp. 45-59). Oxford University Press.
+
+Ryff, C. D., Love, G. D., Urry, H. L., Muller, D., Rosenkranz, M. A., Friedman, E. M., ... & Singer, B. (2006). Psychological well-being and ill-being: do they have distinct or mirrored biological correlates?. Psychotherapy and Psychosomatics, 75(2), 85-95. doi.org/10.1159/000090892
+
+]
+
+---
+name: dual4
+# 구분 vs. 거울 가설
+
+- 구분 vs. 거울(Ryff et al., 2006)
+  - 구분가설(distinct hypothesis): 안녕감과 불안녕감은 각각의 연속선상의 정도
+
+  - 거울가설(mirror hypothesis): 안녕감과 불안녕감은 단일 연속선상의 양극단
+
+- 참가자: 이주자 종단연구 참여 여성 135명(age = 61 ~ 91; M = 74, SD = 7.08) 대상 신경기능, 심리기능, 및 심리지표 측정
+
+- **측정**
+
+- 안녕감
+  - 자율성(autonomy), 환경통제(environmental mastery), 개인성장(personal growth), 긍정관계(positive relatedness to others), 삶의 목적(a sense of purpose in life), 자아수용(self-acceptance) 
+  - 긍정감정(PANAS와 MASQ의 긍정요인) 
+- 불안녕감
+  - 부정감정(PANAS의 부정요인)
+  - 우울증상(CES-D), 기질불안, 기질분노
+- 생물학적표지(biomarker)
+  - 신경기능: 코티솔(스트레스 홀몬), 에피네프린 & 놀에피네프린(각성홀몬 및 신경물질), DHEA-s(남성홀몬)
+  - 심혈관기능: 몸무게, 허리힙비율, 혈압(수축/확장), HDL/ 총콜레스트롤, 당화혈색소(장기혈중 포도당 농도)
+
+
+---
+name: dual5
+# 구분 vs. 거울가설2
+
+- 삶의 목적, 성장, 자율성은 코티솔, 놀에피네프린(각성 신경물질), HDL콜레스트롤과 양의 관련성이 있지만, 심리적 불안녕과는 관련성이 없었다 (Ryff et al., 2006). 
+
+- 안녕/불안녕감과 신경기능 측정과의 상관관계(n = 135, age = 61-91)
+![title](fig/Ryfftbl1.PNG "캡션")
+
+
+---
+name: dual6
+# 구분 vs. 거울가설3
+
+안녕/불안녕감과 심혈관기능 측정과의 상관관계(n = 135, age = 61-91)
+![title](fig/Ryfftbl2.PNG "캡션")
+
+
+---
+name: dual7
+# 구분 vs. 거울가설4
+
+.pull-left[
+코티솔과 개인성장과의 관계(n = 52, age = 75+)
+![title](fig/Ryfffig1.PNG "캡션")
+]
+
+.pull-right[
+코티솔과 삶의 목적과의 관계(n = 52, age = 75+)
+![title](fig/Ryfffig2.PNG "캡션")
+]
+
+
+---
+name: dual8
+# 구분 vs. 거울가설5
+
+- 불안녕/안경 및 생물학적지표와의 구분 or 거울 연관성 패턴
+  - 10개 생물학적지표 중 7개는 구분가설 지지, 2개는 거울가설 지지, 1개(에피네프린)는 반거울지지(분노/긍정관계 모두 정의 상관).
+
+![title](fig/Ryfftbl3.PNG "캡션")
+
+
+---
+name: signal1
+# 기능과 신호1
+
+- 기능(functioning)과 기능작동에 대한 신호 구분 필요. 
+
+- 기능과 신호 중 무엇이 정신건강의 본질인지를 두고 논쟁이 있으나(예: Ryan & Deci, 2001), 이 연구에서는 기능을 신호를 예측하는 변수로 판단. 기능은 문제를 해결 또는 근본욕구를 충족하는 도구 혹은 자원이고, 신호는 기능 작동여부에 대한 평가 혹은 증상.
+
+- 공동통화(common currency)로서의 쾌락 (Cabanac, 1992)
+  - 공동통화는 범용적으로 사용되는 가치의 지표. 쾌락은 가치 자차게 아니라 가치에 대한 지표. 기능이 가치. 
+
+
+.footnote[
+Cabanac, M. (1992). Pleasure: the common currency. Journal of Theoretical Biology, 155(2), 173-200. https://doi.org/10.1016/S0022-5193(05)80594-6
+
+Ryan, R. M., & Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. Annual Review of Psychology, 52, 141–166. http://dx.doi.org/10.1146/annurev.psych.52.1.141
+
+]
+
+
+---
+name: signal2
+# 정신건강의 진화적 접근
+
+- 진화적 관점에서 현재의 마음의 작용기제는 선택압의 작용결과.
+  - 진화과정의 '체'를 통해 재생산에 직간적접으로 기여하는 기능이 여러 세대를 거쳐 누적적으로 전달 
+
+  - 불안녕감: 기능의 이상작동에 대한 전반적인 평가. 우울불안과 같은 감정적 고통. 감정적 고통은 물리적 고통과 마찬가지로 문제발생(예: 사회적 고립)에 대해 주의를 기울여 문제를 해결하도록 하는 신호 (Watson & Andrews, 2002). 
+  
+  - 안녕감: 기능의 정상적인 작동에 대한 전반적인 평가. 삶의 만족과 같은 감정적 쾌락. 적합도를 향상시키는 성취(예: 호혜적 관계형성)에 대해 보상을 통해 문제해결 지속하도록 하는 신호 (Buss, 1999; Diener, 2006). 
+  
+
+.footnote[
+
+Gross, J. J., & Muñoz, R. F. (1995). Emotion regulation and mental health. Clinical Psychology: Science and Practice, 2(2), 151-164. https://psycnet.apa.org/doi/10.1111/j.1468-2850.1995.tb00036.x
+
+Buss, D. M. (2000). The evolution of happiness. American Psychologist, 55(1), 15. https://doi.org/10.1037/0003-066X.55.1.15
+
+Diener, E. (2006). Guidelines for national indicators of subjective well-being and ill-being. Journal of Happiness Studies, 7(4), 397-404.https://doi.org/10.1007/s10902-006-9000-y
+
+Watson, P. J., & Andrews, P. W. (2002). Toward a revised evolutionary adaptationist analysis of depression: The social navigation hypothesis. Journal of Affective Disorders, 72(1), 1-14. https://doi.org/10.1016/S0165-0327(01)00459-1
+
+]  
+
+
+---
+name: signal3
+# 안녕감 논쟁
+
+- 유데모닉(Eudaimonic) 안녕감 혹은 심리적 안녕감(Psychological well-being)을 지지하는 학자들은 안녕감이 다차원적 개념으로서 삶만족 단일 척도로는 온전하게 측정할 수 없다고 주장. 
+  
+  - 이들은 안녕감이란 쾌락의 경험이나 삶의만족 그 이상의 개념으로서 다양한 삶의 문제해결능력을 포괄하는 심리적 기능 혹은 유데모니아(Eudaimonia)이어야 한다고 지적 (예: Ruggeri et al., 2020). 
+  
+  - 주관적안녕감의 부정감정과 심리적안녕감 사이의 양의 관계. 주관적안녕감 논리에 따르면, 부정감정과 심리적안녕감 사이에는 부적 관계만 나타나야 한다.
+  
+  
+---
+name: signal4
+# 안녕감 논쟁2  
+  
+- 안녕감을 둘러싼 논쟁이 지속되는 이유는 심리적 안녕감과 주관적 안녕감에서 안녕감이란 용어를 동일하게 사용한다고 해서 기능에 대한 개념과 신호에 대한 개념을 동일한 수준의 개념으로 혼동하기 때문.
+
+- 또한 안녕감과 불안녕감이 거울적 측면보다 구분되는 측면이 더 강한데도, 주관적안녕감에 삶의만족 뿐 아니라 두개의 구분되는 요인(긍정감정과 부정감정)을 포함하기 때문에 발생하는 문제. 
+  
+- 주관적 안녕감은, 쾌락이 공동통화로서 가치에 대한 범용적인 신호 역할을 하는 것처럼 (Cabanac, 1992), 삶에 대한 전반적인 평가로서 정신건강의 신호 (Diener, 2006). 
+
+
+.footnote[
+
+Ruggeri, K., Garcia-Garzon, E., Maguire, Á., Matz, S., & Huppert, F. A. (2020). Well-being is more than happiness and life satisfaction: a multidimensional analysis of 21 countries. Health and Quality of Life Outcomes, 18(1), 1-16. https://doi.org/10.1186/s12955-020-01423-y
+
+]
+
+
+---
+name: signal5
+# 기능과 신호의 이중체계
+
+이중체계는 기능과 신호에 모두 적용 필요
+
+- 기능의 이중체계
+  - 회피 기능
+  - 접근 기능
+  
+- 신호의 이중체계
+  - 회피기능의 신호
+  - 접근기능의 신호
+
+
+
+
+---
+name: signal6
+# 기능의 이중체계:관계성
+
+- 기능의 요소에 대해서는 다양한 이론이 경합중. 심리적 안녕감(psychological well-being) 문헌에서는 자율성(autonomy), 환경통제(environmental mastery), 개인성장(personal growth), 긍정관계(positive relatedness to others), 삶의 목적(a sense of purpose in life), 자아수용(self-acceptance)을 들지만, 자기결정성(self-determination) 문헌에서는 자율성, 유능성, 관계성에만 국한. 소속감만을 가장 근본적인 기능으로 제시하는 문헌도 존재 (Pittman & Zeigler, 2007).
+
+- 이 연구에서는 관계성이 생존과 번식이 가장 근본 기능이라는 관점(Baumeister & Leary, 1995)을 채택해 관계성에 초점. 
+
+  - 인류는 사회구성을 자연환경에 대한 적응전략으로서 채택. 사회구성은 상당히 성공적이어 인류가 지구에서 번성하게 되는 기반이나, 동시에 인류에게 사회는 적응해야 하는 또 다른 환경으로 작용. 
+
+  - 관계성(relatedness)은 인간의 근본 욕구 증 하나로서 사회집단에 소속돼 다른 사회적 존재와의 연결 및 고립회피의 기능 (Baumeister & Leary, 1995; Deci & Ryan, 2000). 
+
+ 
+
+.footnote[
+
+Deci, E. L., & Ryan, R. M. (2000). The ‘‘what’’ and ‘‘why’’ of goal pursuits: Human needs and the self-determination of behavior. _Psychological Inquiry, 11_, 227–268. http://dx.doi.org/10.1207/S15327965PLI1104_01.
+
+Pittman, T. S., & Zeigler, K. R. (2007). Basic human needs. In  A. W. Krugalnski & E. T. Higgins (Eds.). Social psychology: Handbook of basic principles (pp. 473-489). Guildord. 
+
+
+]
+
+
+---
+name: signal7
+# 관계성: 고립 대 소속연결
+
+- 관계성은 인간행동의 이중체계의 일부로서 사회적 고립의 회피와 다른 사회적 존재와의 연결추구 등 크게 2개 요소로 구성. 
+  
+  - 사회적 고립(Social isolation): 사회집단에서 무시되거나 배제되는 것 (Williams, 2007)
+  
+  - 연결(Connectedness): 다른 사회적 존재와 호혜적으로 형성된 관계. 관계적 연결(relational connectedness)과 집합적 연결(collective connectedness)로 구성 (Hawkley et al., 2005). 관계적 연결과 집합적 연결은, 혼용해서는 안되나, 상호긴밀하게 얽여 있어 독립적이지 않고 상호보완적 (Brewer, 2007). 
+
+
+.footnote[
+
+Brewer, M. B. (2007). Social identity and close relationships: What is the connection? Presented at Sydney symposiums of social psychology 2007. http://
+www.sydneysymposium.unsw.edu.au/2007/Chapters/BrewerSSSP07.pdf.
+
+Hawkley, L. C., Browne, M. W., & Cacioppo, J. T. (2005). How can I connect with thee? Let me count the ways. _Psychological Science, 16_, 798–804. http://dx.doi.org/10.1111/j.1467-9280.2005.01617.x.
+
+Williams, K. (2007). Ostracism. _Annual Review of Psychology, 58_, 425–452. http://dx.doi.org/10.1146/annurev.psych.58.110405.085641.
+
+]
+
+
+---
+name: signal8
+# 신호의 이중체계: 만족 vs. 우울/불안
+
+- 만족
+  - 긍정기능의 범용지표
+
+- 우울/불안
+  - 부정기능의 범용지표
+
+- 우울/불안 장애 vs. 준임상(subclinical) 우울/불안
+  - 정신과진단에 사용한 DSM 기준에 부합하는 우울/불안 장애는 정신질환. 
+  - 준임상 우울/불안은 감정경험으로서 정신질환 혹은 장애가 아니다. 
+  - 환경을 보다 면밀하게 감시하도록 하고 행동을 신중하도록 하는 등 문제해결에 기여하는 적응이다. 
+
+---
+name: measure
+# 측정
+
+I. 연구와 임상 등의 목적에 따라 구분 필요
+
+- 임상
+  - 직접적인 문제해결이 목표이므로  정신건강의 모든 요소(기능, 신호, 안녕감, 불안녕감)을 종합해 측정
+
+  - 예: 일반건강설문지(General Health Questionnaire-12: GHQ-12)다. 골드버그와 힐리어(Goldberg & Hillier, 1979)가 일반인의 정신질환 선별을 위해 자기보고식 설문지(평소 느끼던 심리상태에 비해 지난2~3주 동안의 변화 응답)로 개발한 척도다. 
+
+  - GHQ에 대한 요인구조의 연구에서 요인들이 1~3개로 일관되지 않지만, 박종익 등(2012)의 한국성인을 대상으로 한 요인분석에서는 ‘우울 및 불안’(예: “불행하거나 우울하다고 느낀다” “자신감을 잃고 있다”)과 ‘사회적 역기능’(예: “어떤 일에 대해 결정할 수 있다고 느낀다” “일상생활을 정상적으로 즐길 수 있다”)등 2개 요인이 나타났다. 
+  
+  - 심리적안녕감 척도(자율성, 관계성, 통제성, 목적성, 개인성장, 자아수용)
+  - 주관적안녕감 척도(삶의 만족, 긍정감정, 부정감정)
+
+- 연구
+  - 원리와 기제의 이해가 목표이므로 기능, 신호, 안녕감, 불안녕감 분리해 측정
+
+
+
+.footnote[
+박종익, 김영주, & 조맹제. (2012). 한국판 일반 건강 설문지의 요인 구조. <Journal of Korean Neuropsychiatric Association>, 51, 178-184.
+de Barcelos Silva, A., Gomes, M. M., da Costa, C. A., da Rosa Righi, R., Barbosa, J. L. V., Pessin, G., ... & Federizzi, G. (2020). Intelligent personal assistants: A systematic literature review. Expert Systems with Applications, 147, 113193.
+Goldberg, D. P., & Hillier, V. F. (1979). A scaled version of the General Health Questionnaire. Psychological Medicine, 9(1), 139-145.
+Gross, J. J., & Muñoz, R. F. (1995). Emotion regulation and mental health. Clinical Psychology: Science and Practice, 2(2), 151-164.
+
+]
+
+
+
+---
+name: synthesis1
+# 종합1
+
+I. 정신건강은 신체건강 및 사회건강과 함께 건강의 3대 영역 중 하나.
+
+II. 정신건강과 정신질환은 구분 필요. 정신질환의 반대가 정신건강이 아니다. 
+
+- 따라서 정신건강은 4개 영역으로 구분 가능
+  - 완전 안녕: 높은 안녕 + 낮은 불안녕
+  - 불완전 안녕: 낮은 안녕 + 낮은 불안녕
+  - 불완전 불안녕: 높은 안녕 + 높은 불안녕
+  - 완전 불안녕: 낮은 안녕 + 높은 불안녕
+
+
+III. 정신건강은 안녕감과 불안녕감 및 기능과 신호(또는 지표)로 구분 필요. 
+
+IV. 기능은 원인과 신호를 매개하는 기제. 긍정기능을 긍정신호를 매개하고, 부정기능은 부정신호를 매개.
+
+
+
+---
+name: last
+
+class: middle, inverse
+
+.pull-left[
+# **경청해 주셔서 <br>감사합니다.**
+<br/>
+
+]
+
+.pull-right[
+.right[
+
+
+]
+]
